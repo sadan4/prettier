@@ -61,6 +61,7 @@ const shouldPrintDirectly = createTypeCheckFunction([
  * @returns {Doc}
  */
 function print(path, options, print, args) {
+  return options.originalText;
   if (path.isRoot) {
     options.__onHtmlBindingRoot?.(path.node, options);
   }
